@@ -1,7 +1,7 @@
 import MyModel from '../model/MyModel';
 import { Viewable, View, Inject } from 'conbo';
 
-@Viewable('conbo.example.typescript', 'InputView')
+@Viewable('InputView')
 export default class InputView extends View
 {
 	@Inject public myModel:MyModel;
