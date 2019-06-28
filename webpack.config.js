@@ -9,18 +9,25 @@ module.exports = env =>
 
 	const DEBUG = !!env.DEBUG || isDevServer;
 
-	let plugins = [new CopyWebpackPlugin([{from:'./src/index.html'}])];
-	if (!DEBUG) plugins.unshift(new webpack.optimize.UglifyJsPlugin({compress:{warnings:false}}));
+	let plugins =
+	[
+		new CopyWebpackPlugin(['./public'])
+	];
+
+	if (!DEBUG)
+	{
+		plugins.unshift(new webpack.optimize.UglifyJsPlugin({compress:{warnings:false}}));
+	}
 
 	return {
 
-		entry: './src/app/TypeScriptExample.ts',
+		entry: './src/index.ts',
 		devtool: 'source-map',
 
 		output: 
 		{
 			path: path.resolve(__dirname, 'dist'),
-			filename: 'TypeScriptExample.js'
+			filename: 'app.js'
 		},
 
 		resolve: 

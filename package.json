@@ -24,7 +24,7 @@
 	},
 	"homepage": "https://github.com/neilrackett/conbo-example-typescript#readme",
 	"dependencies": {
-		"conbo": "^4.3.18"
+		"conbo": "^4.3.21"
 	},
 	"devDependencies": {
 		"copy-webpack-plugin": "^4.1.1",
