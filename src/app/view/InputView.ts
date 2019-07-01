@@ -1,5 +1,6 @@
+import { Inject, View, Viewable } from 'conbo';
 import MyModel from '../model/MyModel';
-import { Viewable, View, Inject } from 'conbo';
+import template from './InputView.html';
 
 @Viewable('InputView')
 export default class InputView extends View
@@ -9,6 +10,6 @@ export default class InputView extends View
 	protected declarations()
 	{
 		this.tagName = 'p';
-		this.template = `My name is <input type="text" placeholder="Name" cb-bind="myModel.name" />`;
+		this.template = template;
 	}
 }

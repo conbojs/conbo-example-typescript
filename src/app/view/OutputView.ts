@@ -1,6 +1,6 @@
-import { View, Viewable, Inject } from 'conbo';
-
+import { Inject, View, Viewable } from 'conbo';
 import MyModel from '../model/MyModel';
+import template from './OutputView.html';
 
 @Viewable('OutputView')
 export default class OutputView extends View
@@ -10,7 +10,7 @@ export default class OutputView extends View
 	protected declarations()
 	{
 		this.tagName = 'h1';
-		this.template = `Hello, {{myModel.name|parseName}}!`;
+		this.template = template;
 	}
 
 	public parseName(name:string):string

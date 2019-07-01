@@ -46,7 +46,11 @@ module.exports = env =>
 				{
 					test: /\.scss$/,
 					loader: 'style-loader!css-loader!sass-loader'
-				}
+				},
+				{
+					test: /\.(txt|html)$/, // Use html-loader if you want HTML compression, inline images, etc
+					loader: 'raw-loader'
+				},
 			]
 		},
 
