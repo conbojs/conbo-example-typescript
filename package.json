@@ -5,8 +5,7 @@
 	"main": "./dist/index.html",
 	"scripts": {
 		"build": "webpack",
-		"serve": "webpack-dev-server",
-		"postinstall": "npm link typescript"
+		"serve": "webpack-dev-server"
 	},
 	"repository": {
 		"type": "git",
@@ -24,18 +23,20 @@
 	},
 	"homepage": "https://github.com/neilrackett/conbo-example-typescript#readme",
 	"dependencies": {
-		"conbo": "^4.3.21"
+		"conbo": "^4.3.27"
 	},
 	"devDependencies": {
-		"copy-webpack-plugin": "^4.1.1",
-		"css-loader": "^0.28.7",
-		"node-sass": "^4.12.0",
+		"copy-webpack-plugin": "^4.6.0",
+		"css-loader": "^0.28.11",
+		"node-sass": "^4.14.1",
 		"path": "^0.12.7",
-		"raw-loader": "^3.0.0",
-		"sass-loader": "^6.0.6",
-		"style-loader": "^0.19.0",
-		"ts-loader": "^3.2.0",
-		"webpack": "^3.11.0",
-		"webpack-dev-server": "^2.11.1"
+		"raw-loader": "^3.1.0",
+		"sass-loader": "^6.0.7",
+		"style-loader": "^0.19.1",
+		"ts-loader": "^7.0.4",
+		"typescript": "^3.9.2",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.11",
+		"webpack-dev-server": "^3.11.0"
 	}
 }

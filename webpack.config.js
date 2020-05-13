@@ -11,16 +11,12 @@ module.exports = env =>
 
 	let plugins =
 	[
-		new CopyWebpackPlugin(['./public'])
+		new CopyWebpackPlugin(['./static'])
 	];
-
-	if (!DEBUG)
-	{
-		plugins.unshift(new webpack.optimize.UglifyJsPlugin({compress:{warnings:false}}));
-	}
 
 	return {
 
+		mode: DEBUG ? 'development' : 'production',
 		entry: './src/index.ts',
 		devtool: 'source-map',
 
@@ -37,7 +33,7 @@ module.exports = env =>
 
 		module: 
 		{
-			loaders: 
+			rules: 
 			[
 				{
 					test: /\.tsx?$/, 
