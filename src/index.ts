@@ -1,2 +1,2 @@
 import './index.scss';
-export * from './app/TypeScriptExample';
+export * from './app/ExampleApp';

@@ -1,4 +1,4 @@
-import './TypeScriptExample.scss';
+import './ExampleApp.scss';
 
 import { Application, Viewable } from 'conbo';
 
@@ -6,8 +6,8 @@ import MyContext from './core/MyContext';
 import InputView from './view/InputView';
 import OutputView from './view/OutputView';
 
-@Viewable('TypeScriptExample')
-export default class TypeScriptExample extends Application
+@Viewable('ExampleApp')
+export default class ExampleApp extends Application
 {
 	protected declarations():void
 	{
